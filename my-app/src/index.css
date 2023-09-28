@@ -5,9 +5,33 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+    background-color: #4d1cd4;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.topname {
+  text-align: center;
+  font-family:Garamond, serif;
+  font-size:75px;
+  margin-top: 10px;
+  color: gold;
+
+ }
+
+ .nav {
+  display: flex;
+}
+.nav_list {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  margin: 0 30px;
+  transition: all 0.3s;
+  list-style-type: none;
 }
