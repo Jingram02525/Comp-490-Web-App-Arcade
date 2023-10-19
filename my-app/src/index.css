@@ -1,37 +1,97 @@
+/* styles.css */
+
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
-    background-color: #4d1cd4;
-  
+  padding: 0;
+  background-color: #f0f0f0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.topname {
+header {
+  background-color: #333;
+  color: #fff;
   text-align: center;
-  font-family:Garamond, serif;
-  font-size:75px;
-  margin-top: 10px;
-  color: gold;
-
- }
-
- .nav {
-  display: flex;
+  padding: 20px;
 }
-.nav_list {
-  border: none;
-  padding: 0.5rem 2rem;
-  font-size: 1.6rem;
-  margin: 0 30px;
-  transition: all 0.3s;
-  list-style-type: none;
+
+header h1 {
+  font-size: 36px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.game-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.game-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  width: calc(33.33% - 20px);
+}
+
+.game-card img {
+  max-width: 100%;
+  height: auto;
+}
+
+.game-card h3 {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.game-card p {
+  font-size: 16px;
+}
+
+.game-card a {
+  display: block;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.game-card a:hover {
+  background-color: #555;
+}
+footer {
+  text-align: center; /* Center the text horizontally */
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px; /* Add some margin to separate it from the content */
+}
+
+.user-actions {
+  position: absolute;
+  top: 20px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+}
+
+.button {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 10px; /* Add spacing between buttons */
+}
+
+.button:hover {
+  background-color: #555;
 }
