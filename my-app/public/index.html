@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RePlay</title>
-    <!--<link rel="stylesheet" type="text/css" href="style.css" />-->
-  </head>
-  <body>
+    <!--<link rel="stylesheet" type="text/css" href="style.css">-->
+</head>
+<body>
     <header>
-      <h1>Welcome to RePlay</h1>
-      <p>Play a variety of fun games online</p>
-      <div class="user-actions">
-        <a href="login.html" class="button">Login</a>
-        <a href="signup.html" class="button">Sign Up</a>
-      </div>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">RePlay</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+                <button type="submit">Search</button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="roms.html">ROMs</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Sign Up</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-      <section class="game-list">
-        <h2>Game Selection</h2>
-        <div class="game-card">
-          <img src="game1.jpg" alt="Game 1" />
-          <h3>Game 1</h3>
-          <p>Description of Game 1</p>
-          <a href="game1.html">Play Game</a>
-        </div>
-        <div class="game-card">
-          <img src="game2.jpg" alt="Game 2" />
-          <h3>Game 2</h3>
-          <p>Description of Game 2</p>
-          <a href="game2.html">Play Game</a>
-        </div>
-        <!-- Add more game cards here -->
-      </section>
+        <section class="hero">
+            <h1>Welcome to RePlay</h1>
+            <p>Explore a world of gaming nostalgia and adventure. RePlay offers a curated collection of classic games and ROMs for various consoles.</p>
+            <a href="games.html" class="button">Discover Games</a>
+            <a href="roms.html" class="button">Discover ROMs</a>
+        </section>
+        <section class="about">
+            <h2>About RePlay</h2>
+            <p>RePlay is your one-stop destination for reliving the magic of classic games. Whether you're a fan of retro titles or seeking nostalgic experiences, we've got you covered. Browse our extensive library of games and ROMs, spanning multiple gaming consoles, and embark on a journey through gaming history.</p>
+        </section>
+        <section class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Explore a diverse collection of classic games.</li>
+                <li>Discover ROMs for various gaming consoles.</li>
+                <li>Relive the nostalgia of iconic characters and adventures.</li>
+                <li>User-friendly interface for seamless navigation.</li>
+                <li>Create an account to personalize your gaming experience.</li>
+            </ul>
+        </section>
     </main>
     <footer>
-      <p>&copy; 2023 Web App Arcade</p>
+        <p>&copy; 2023 RePlay | <a href="terms.html">Terms and Conditions</a> | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
-  </body>
+</body>
 </html>
