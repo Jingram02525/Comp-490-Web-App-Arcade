@@ -1,21 +1,24 @@
-<form action="action_page.php" method="post">
-    
-  
-    <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" >
-  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" >
-  
-      <button type="submit">Login</button>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Web App Arcade</title>
+    <!--<link rel="stylesheet" type="text/css" href="login.css">-->
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-      <a href="signup.html" class="button">Sign Up</a>
-     
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.html">Sign up</a></p>
     </div>
-  
-    <div class="container" style="background-color:#f1f1f1">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
-    </div>
-  </form>
+</body>
+</html>

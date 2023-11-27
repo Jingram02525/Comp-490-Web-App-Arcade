@@ -1,4 +1,4 @@
-/* styles.css */
+/* style.css */
 
 body {
   font-family: Arial, sans-serif;
@@ -10,12 +10,71 @@ body {
 header {
   background-color: #333;
   color: #fff;
-  text-align: center;
   padding: 20px;
 }
 
-header h1 {
-  font-size: 36px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Add this line to horizontally center the search bar */
+  margin-top: 10px; /* Adjust the top margin as needed */
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search-bar button {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s; /* Smooth color transition for hover */
+}
+
+.nav-links a:hover {
+  color: #ddd; /* Slightly lighter color on hover */
+}
+
+.nav-links a:active {
+color: #ddd;
+}
+
+.nav-links a:visited {
+  text-decoration: underline;
 }
 
 main {
@@ -24,61 +83,19 @@ main {
   padding: 20px;
 }
 
-.game-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.game-card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 20px;
-  width: calc(33.33% - 20px);
-}
-
-.game-card img {
-  max-width: 100%;
-  height: auto;
-}
-
-.game-card h3 {
-  font-size: 24px;
-  margin: 10px 0;
-}
-
-.game-card p {
-  font-size: 16px;
-}
-
-.game-card a {
-  display: block;
-  background-color: #333;
-  color: #fff;
+.hero {
   text-align: center;
-  padding: 10px;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
-.game-card a:hover {
-  background-color: #555;
-}
-footer {
-  text-align: center; /* Center the text horizontally */
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  margin-top: 20px; /* Add some margin to separate it from the content */
+.hero h1 {
+  font-size: 36px;
 }
 
-.user-actions {
-  position: absolute;
-  top: 20px; /* Adjust the top position as needed */
-  right: 20px; /* Adjust the right position as needed */
+.hero p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
 }
 
 .button {
@@ -89,9 +106,56 @@ footer {
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
-  margin-left: 10px; /* Add spacing between buttons */
+  font-size: 16px;
 }
 
 .button:hover {
   background-color: #555;
+}
+
+.about,
+.features {
+  margin-bottom: 30px;
+}
+
+.about h2,
+.features h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.about p,
+.features ul {
+  font-size: 16px;
+  color: #555;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: none; /* Remove underline on hover */
+}
+
+.button + .button {
+  margin-left: 10px;
 }
