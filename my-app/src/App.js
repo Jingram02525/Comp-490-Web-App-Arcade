@@ -1,8 +1,7 @@
 import React from 'react';
-import './App.css';
-import RepHeader from './components/RepHeader';
-import RepMain from './components/RepMain';
-import RepFooter from './components/RepFooter';
+import Navbar from './components/Navbar';
+import Main from './components/Main';
+import Footer from './components/Footer';
 import {BrowserRouter as MyRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
