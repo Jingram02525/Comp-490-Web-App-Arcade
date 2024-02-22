@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
 //import RepHeader from './components/RepHeader';
 //import RepMain from './components/RepMain';
 //import RepFooter from './components/RepFooter';
-import React from 'react';
+//import React from 'react';
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Footer from './components/Footer';
@@ -46,9 +45,9 @@ function App() {
         </tbody>
       </table>
     </div>
-      <RepHeader/>
-      <RepMain/><RepMain/>
-      <RepFooter/>
+      <Navbar/>
+      <Main/><Main/>
+      <Footer/>
     </>
   );
 }
