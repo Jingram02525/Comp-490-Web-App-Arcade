@@ -1,26 +1,27 @@
 import React, { useEffect, useState } from 'react';
-import './App.css';
-//import RepHeader from './components/RepHeader';
-//import RepMain from './components/RepMain';
-//import RepFooter from './components/RepFooter';
-import React from 'react';
-import Navbar from './components/Navbar';
-import Main from './components/Main';
-import Footer from './components/Footer';
+//import './App.css';
+//  import RepHeader from './components/RepHeader';
+//  import RepMain from './components/RepMain';
+//  import RepFooter from './components/RepFooter';
+
+ import Navbar from './components/Navbar';
+ import Main from './components/Main';
+ import Footer from './components/Footer';
 //import {BrowserRouter as MyRouter, Route, Switch} from 'react-router-dom';
 
 function App() {
-  const [data, setData] = useState([])
-  useEffect(() => {
-    fetch('http://localhost:8081/users')
-    .then(res => res.json())
-    .then(data => setData(data))
-    .catch(err => console.error(err))
+  // const [data, setData] = useState([])
+  // useEffect(() => {
+  //   fetch('http://localhost:8081/users')
+  //   .then(res => res.json())
+  //   .then(data => setData(data))
+  //   .catch(err => console.error(err))
 
-  })
+  // })
+
   return (
     <>
-    <div style={{padding:"50px"}}>
+    {/* <div style={{padding:"50px"}}>
       <table>
         <thead>
           <th>item_id</th>
@@ -45,10 +46,10 @@ function App() {
           ))}
         </tbody>
       </table>
-    </div>
-      <RepHeader/>
-      <RepMain/><RepMain/>
-      <RepFooter/>
+    </div> */}
+      <Navbar/>
+      <Main/>
+      <Footer/>
     </>
   );
 }
