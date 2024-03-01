@@ -1,6 +1,6 @@
 import React from "react";
 
-function GameCanvas(){
+function LoginPage(){
     return ( 
         <div>
             <h1>This is the about page</h1>
@@ -8,4 +8,4 @@ function GameCanvas(){
     )
 }
 
-export default GameCanvas;
+export default LoginPage;

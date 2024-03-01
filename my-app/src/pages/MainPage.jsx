@@ -1,7 +1,11 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
-const Main = () => {
+const MainPage = () => {
     return (
+        <>
+        <Navbar/>
         <main>
         <section className='text-center mb-[30px]'>
             <h1 className='text-4xl'>Welcome to RePlay</h1>
@@ -24,7 +28,9 @@ const Main = () => {
             </ul>
         </section>
     </main>
+    <Footer/>
+    </>
     );
 }
 
-export default Main;
+export default MainPage;

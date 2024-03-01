@@ -1,11 +1,42 @@
-import Navbar from './components/Navbar';
-import Main from './components/Main';
-import Footer from './components/Footer';
-//import {BrowserRouter as MyRouter, Route, Switch} from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import MainPage from './pages/MainPage';
+import Login from './pages/LoginPage';
+import Register from './pages/Register';
+import GameCanvas from './components/GameCanvas';
+
+
 import React, { useEffect, useState } from 'react';
 
 function App() {
-  // const [data, setData] = useState([])
+    return (
+    <div className='app'>
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+        <Route path="/api/gamecanvas" element={<GameCanvas/>} />
+        <Route path="/api/login" element={<Login />} />
+        <Route path="/api/register" element={<Register />} />
+      </Routes>
+    </div>
+    );
+}
+// <Main/>
+//<Footer/>
+
+
+// const Main = () => (
+//   <Switch>
+//     <Route exact path="/" component={MainPage}></Route>
+//     <Route exact path="/api/rom" component={MainPage}></Route>
+//     <Route exact path="/api/games" component={MainPage}></Route>
+//     <Route exact path="/api/login" component={MainPage}></Route>
+//     <Route exact path="/api/sign-up" component={MainPage}></Route>
+//   </Switch>
+// );
+
+export default App;
+
+//Front-Communicating to backend functions/Tests
+// const [data, setData] = useState([])
   // useEffect(() => {
   //   fetch('http://localhost:8081/users')
   //   .then(res => res.json())
@@ -14,8 +45,7 @@ function App() {
 
   // })
 
-  return (
-    <>
+    
     {/* <div style={{padding:"50px"}}>
       <table>
         <thead>
@@ -43,12 +73,3 @@ function App() {
       </table>
     </div>
           */}
-      <Navbar/>
-      <Main/>
-      <Footer/>
-    </>
-  );
-}
-
-export default App;
-
