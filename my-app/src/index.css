@@ -4,10 +4,10 @@
 /* style.css */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Kode Mono", monospace;
   margin: 0;
   padding: 0;
-  background-color: #f0f0f0;
+  background-color: #250E4F;
 }
 
 main {
