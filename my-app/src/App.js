@@ -1,5 +1,5 @@
 import Home from './pages/Home';
-//import {BrowserRouter as MyRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 
 function App() {
@@ -41,7 +41,13 @@ function App() {
       </table>
     </div>
           */}
-      <Home />
+       <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Login/>}></Route>
+          <Route path='/register'  element={<Register/>}></Route>
+          <Route path= '/dashboard'  element={<Home/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
