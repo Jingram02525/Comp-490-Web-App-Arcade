@@ -1,6 +1,4 @@
-import Navbar from './components/Navbar';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Home from './pages/Home';
 //import {BrowserRouter as MyRouter, Route, Switch} from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 
@@ -43,9 +41,7 @@ function App() {
       </table>
     </div>
           */}
-      <Navbar/>
-      <Main/>
-      <Footer/>
+      <Home/>
     </>
   );
 }
