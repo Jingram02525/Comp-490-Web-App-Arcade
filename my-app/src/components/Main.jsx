@@ -2,11 +2,11 @@ import React from 'react';
 
 const Main = () => {
     return (
-        <main>
-            <section class="hero">
-                <h1>Welcome to RePlay</h1>
-                <p>Explore a world of gaming nostalgia and adventure. RePlay offers a curated collection of classic games and ROMs for various consoles.</p>
-                <a href="games.html" class="button games2"><b>Discover Games</b></a>
+        <main className='max-w-[1200px] mx-auto my-0 p-5'>
+            <section className='text-center mb-[30px];'>
+                <h1 className='text-4xl text-white'>Welcome to RePlay</h1>
+                <p className='text-lg text-white mb-5'>Explore a world of gaming nostalgia and adventure. RePlay offers a curated collection of classic games and ROMs for various consoles.</p>
+                <a href="games.html" class='button games2'><b>Discover Games</b></a>
                 <a href="roms.html" class="button roms2"><b>Discover ROMs</b></a>
             </section>
             <section class="about">
@@ -15,7 +15,7 @@ const Main = () => {
             </section>
             <section class="features">
                 <h2>Features</h2>
-                <ul>
+                <ul className='p-0 list-style: none'>
                     <li>Explore a diverse collection of classic games.</li>
                     <li>Discover ROMs for various gaming consoles.</li>
                     <li>Relive the nostalgia of iconic characters and adventures.</li>
