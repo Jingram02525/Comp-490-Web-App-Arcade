@@ -11,21 +11,76 @@ app.get('/api', (req, res) => {
     res.json({message:"Hello world!"});
 })
 
-// const db = mysql.createConnection({
-//        host: "localhost",
-//         port: "3306",
-//         user: "root",
-//         password: '1234',
-//         database: "webgame",
-// })
+/*CREATING NEW USERS */
+/*NOTE I WILL CHANGE THIS SO IT WORKS WITH DATABASE */
+// Array containt all existing users
+const users = [];
+const generatedId = () => Math.random().toString(36).substring(2,10);
 
-// db.connect((err) => {
-//     if(err) {
-//         console.error('Error connecting to MYSQL:', err)
-//     } else {
-//         console.log('Connected to MYSQL database:')
-//     }
-// })
+
+/*REGISTER AND RETURN RESPONSE TO FRONTEND */
+app.post("/api/register", async (req, res) => {
+    const { username, password, email } = req.body;
+    const id = generatedId();
+
+    //Checks if duplicate, validation
+    const result = users.filter(
+        (user) => user.username === username && user.password === password
+    );
+
+    //returns result of 0 if true
+    if(result.length === 0) {
+        const newUser = {id, email, password, username };
+        //add the new user to database or array in this case
+        users.push(newUser);
+        //returns a sucess message
+        return res.json({
+            message: "Account created successfully",
+        });
+    }
+
+    //If there is an existing user
+    res.json({
+        error_message: "User already exists",
+    })
+});
+
+
+
+
+
+/*LOGIN AND SOME LEVEL OF SECURITY CHECKS */
+app.post("/api/login", (req, res) => {
+    const { username, password } = req.body;
+    //Checks if the user exists
+    let result = users.filter(
+        user => user.username === username && user.password === password
+    );
+
+    // if user does not exist,
+    if(result.length !== 1) {
+        return res.json({
+            error_message: "Incorrect credentials",
+        })
+    }
+
+    //If user exists
+    res.json({
+        message: "Login  successfully",
+        id: result[0].id,
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -35,19 +90,3 @@ app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
 
-// app.post('/signup', (req, res) => {
-//     const { firstName } = req.body;
-
-//     console.log(req.body);
-
-//    //  Insert form data into the database
-//     db.query('INSERT INTO test (first) VALUES (?)',
-//        [firstName],
-//         (error, results) => {
-//             if (error) {
-//                 console.error('Error inserting data:', error);
-//                 return res.status(500).json({ error: 'An error occurred while processing your request.' });
-//             }
-//             res.status(200).json({ message: 'Form submitted successfully.' });
-//         });
-// });

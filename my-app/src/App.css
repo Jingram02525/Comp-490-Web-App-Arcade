@@ -1,0 +1,68 @@
+.login {
+    background-color: #1d0631;
+    height: 100vh;
+    color: #c1a2f4;
+    padding: 30px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+  }
+  
+  .loginTitle {
+    margin-top: 0;
+    padding-bottom: 20px;
+    font-size: 72px;
+    color: #cfb1ff;
+  }
+  
+  .fields {
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    padding-bottom: 10px;
+  }
+  
+  .email,
+  .password {
+    padding-bottom: 5px;
+  }
+  
+  input {
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #cfb1ff;
+  }
+  
+  button {
+    border-radius: 8px;
+    padding: 5px 15px;
+    color: #c1a2f4;
+    background-color: #3a1772;
+    border-color: #733cca;
+    font-size: 20px;
+  }
+  
+  a:link {
+    color: #9f75d3;
+  }
+  
+  a:visited {
+    color: #9f75d3;
+  }
+  
+  a:hover {
+    color: #8c5fc2;
+  }
+  
+  a:active {
+    color: #8c5fc2;
+  }
+  
+  /*
+  #070F2B
+  #1B1A55
+  #535C91
+  #9290C3
+  */
