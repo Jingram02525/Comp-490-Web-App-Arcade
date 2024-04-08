@@ -36,7 +36,7 @@ const Register = () =>{
                     alert(data.error_message);
                 } else {
                     alert("Account created successfully!");
-                    navigate("/"); //Takes me to login page
+                    navigate("/login"); //Takes me to login page
                 }   
             })
             .catch(err => console.error(err));

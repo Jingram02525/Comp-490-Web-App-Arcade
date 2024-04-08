@@ -1,24 +1,23 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Home from './pages/Home';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
+import Initial from './pages/Initial';
 import './App.css';
 
 function App() {
  
   return (
-       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Login/>}></Route>
+          <Route path= '/'  element={<Initial/>}></Route>
+          <Route path='/login' element={<Login/>}></Route>
           <Route path='/register'  element={<Register/>}></Route>
           <Route path= '/dashboard'  element={<Home/>}></Route>
           <Route path= '/terms' element={<Terms/>}></Route>
           <Route path= '/privacy' element={<Privacy/>}></Route>
         </Routes>
-      </BrowserRouter>
-   
   );
 }
 
