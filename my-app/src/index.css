@@ -10,12 +10,145 @@ body {
   background-color: #250E4F;
 }
 
-main {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+button {
+  background-color: #250E4F;
+  color: #fb923c;
+  border-radius: 5px;
+  padding: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+  border-style: solid;
+  border-color: #250E4F;
+font-weight: bold;
+text-decoration: none;
+font-family: "Kode Mono", monospace;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s; /* Smooth color transition for hover */
+}
+
+.button {
+background-color: #250E4F;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 .button + .button {
   margin-left: 10px;
+}
+
+/*.roms,.button a{
+  color: #EF4444;
+  border-bottom-style: solid;
+}
+
+.roms:hover{
+  background-color: #EF4444;
+  color: white;
+  border-color: #EF4444;
+}
+
+.games, .button a{
+  color: #4ade80;
+  border-bottom-style: solid;
+}
+
+.games:hover{
+  background-color: #4ade80;
+  color: white;
+  border-color: #4ade80;
+}
+
+.login,.button a{
+  color: #0ea5e9;
+  border-bottom-style: solid;
+}
+
+.login:hover{
+  background-color: #0ea5e9;
+  color: white;
+  border-color: #0ea5e9;
+}
+
+.sign-up,.button a{
+  color: #a855f7;
+  border-bottom-style: solid;
+}
+
+.sign-up:hover{
+  background-color: #a855f7;
+  color: white;
+  border-color: #a855f7;
+}*/
+
+.roms2,.button a{
+  background-color: #1E0B41;
+  color: #EF4444;
+  border-bottom-style: solid;
+}
+
+.roms2:hover {
+  background-color: #EF4444;
+  color: white;
+  border-color: #EF4444;
+  transition: color 0.3s;
+}
+
+.games2, .button a{
+  background-color: #1E0B41;
+  color: #4ade80;
+  border-bottom-style: solid;
+}
+
+.games2:hover {
+  background-color: #4ade80;
+  color: white;
+  border-color: #4ade80;
+  transition: color 0.3s;
+}
+
+.about,
+.features {
+    margin-bottom: 30px;
+}
+
+.about h2,
+.features h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  color: #fff
+}
+
+.about p,
+.features ul {
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+.features li {
+    margin-bottom: 10px;
+}
+
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: none; /* Remove underline on hover */
 }

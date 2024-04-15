@@ -3,6 +3,10 @@ const mysql = require('mysql')
 const cors = require('cors')
 const bodyParser = require('body-parser');
 const app = express()
+//const PORT = 8000;
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(cors())
 app.use(express.json());
 app.use(bodyParser.json());
@@ -16,13 +20,17 @@ const db = mysql.createConnection({
         database: "webgame",
 })
 
-db.connect((err) => {
-    if(err) {
-        console.error('Error connecting to MYSQL:', err)
-    } else {
-        console.log('Connected to MYSQL database:')
-    }
-})
+// db.connect((err) => {
+//     if(err) {
+//         console.error('Error connecting to MYSQL:', err)
+//     } else {
+//         console.log('Connected to MYSQL database:')
+//     }
+// })
+
+
+
+
 
 
 
