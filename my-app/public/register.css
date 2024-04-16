@@ -1,0 +1,62 @@
+body {
+    font-family: 'Press Start 2P', cursive; /* This font mimics old video game text */
+    background-color: #640ec5;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://example.com/retro-bg.png'); /* Placeholder for a pixelated background image */
+    background-repeat: repeat;
+}
+
+.container {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #00ff00; /* Neon green, common in retro gaming */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.8em; /* Smaller font for pixel effect */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    background: #222;
+    border: 1px solid #00ff00;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 4px;
+}
+
+button.btn2 {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff0000; /* Bright red, typical for old game consoles */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+}
+
+button.btn2:hover {
+    background-color: #cc0000;
+}
+
+.error-message {
+    color: red;
+    margin-top: 5px; /* Adjust the top margin as needed */
+}

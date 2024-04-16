@@ -5450,9 +5450,20 @@ confirmSignUp.addEventListener('click', async function (e) {
 
 
   const newFirstname = document.querySelector('.new--firstname');
+  const newLastname = document.querySelector('.new--lastname');
+  const newUsername = document.querySelector('.new--username');
+  const newEmail = document.querySelector('.new--email');
+  const newpassword = document.querySelector('.new--password');
 
   const formData = {
-    firstName: newFirstname.value
+
+    email: newEmail.value,
+    userName: newUsername.value,
+    firstName: newFirstname.value,
+    lastName: newLastname.value, 
+    
+    
+    password: newpassword.value
    
     // Add other form field values as needed
   };
@@ -5464,6 +5475,19 @@ confirmSignUp.addEventListener('click', async function (e) {
     console.log('Server response:', response.data);
   }).catch(error => {
     console.error('There was an error making the request:', error);
+    console.error('There was an error making the request:', error);
+        if (error.response.status === 400) {
+            // Display the error message "Username taken!" in red text below the username input textbox
+            const errorMessageElement = document.getElementById("usernameErrorMessage");
+            errorMessageElement.innerText = "Username taken!";
+            errorMessageElement.style.color = "red";
+        }
+        if (error.response.status === 401) {
+          // Display the error message "Username taken!" in red text below the username input textbox
+          const errorMessageElement = document.getElementById("emailErrorMessage");
+          errorMessageElement.innerText = "Email already in use!";
+          errorMessageElement.style.color = "red";
+      }
   });
 });
 },{"axios":"../node_modules/axios/index.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {

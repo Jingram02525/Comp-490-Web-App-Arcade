@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup Page</title>
-    <style>
-        /* Your CSS styles here */
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="register.css">
+    
 </head>
 <body>
 
@@ -19,19 +19,22 @@
         </div>
         <div class="form-group">
             <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName" required>
+            <input class="new--lastname" type="text" id="lastName" name="lastName" required>
         </div>
         <div class="form-group">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <input class="new--username" type="text" id="username" name="username" required>
+            <div id="usernameErrorMessage" class="error-message"></div>            
         </div>
+        
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input class="new--email" type="email" id="email" name="email" required>
+            <div id="emailErrorMessage" class="error-message"></div>
         </div>
         <div class="form-group">
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+            <input class="new--password" type="password" id="password" name="password" required>
         </div>
         <button  class="btn2" type="submit">Sign Up</button>
     </form>
