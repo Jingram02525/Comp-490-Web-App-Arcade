@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import Terms from './pages/Terms';
 import Privacy from './pages/Privacy';
 import Initial from './pages/Initial';
+import EmulatorPage from './pages/EmulatorPage';
 import './App.css';
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
           <Route path= '/dashboard'  element={<Home/>}></Route>
           <Route path= '/terms' element={<Terms/>}></Route>
           <Route path= '/privacy' element={<Privacy/>}></Route>
+          <Route path= '/emulator' element={<EmulatorPage/>}></Route>
+          <Route path= 'localhost/' element={<EmulatorPage/>}></Route>
         </Routes>
   );
 }

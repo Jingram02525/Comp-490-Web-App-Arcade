@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHIP-8 EMULATOR</title>
+    <link rel="stylesheet" href=".\src\style.css">
+</head>
+<body>
+    <div class="rom-selector">
+        <span id="loading-text"></span>
+        <button id="reload">RELOAD</button>
+        ROM : 
+        <select name="roms" id="roms">
+            <option value="BLITZ">BLITZ</option>
+            <option value="BLINKY">BLINKY</option>
+            <option value="BRICK">BRICK</option>
+            <option value="MAZE">MAZE</option>
+            <option value="PICTURE">PICTURE</option>
+            <option value="TANK">TANK</option>
+            <option value="SPACE-INVADER">SPACE-INVADER</option>
+            
+        </select>
+    </div>
+
+    
+    <main>
+        <div class="console">
+            <h1>👾 ATARI EMULATOR 👾</h1>
+            <canvas id="screen"></canvas>
+        </div>
+    </main>
+
+      <!-- Include your JavaScript files -->
+      <script src="./src/emulator.js"></script>
+</body>
+</html>
