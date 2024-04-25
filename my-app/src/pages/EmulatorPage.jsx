@@ -1,5 +1,4 @@
 import React from 'react';
-import '../roms.css'; // Import the CSS file for styles
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 

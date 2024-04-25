@@ -46,9 +46,6 @@ app.post("/api/register", async (req, res) => {
 });
 
 
-
-
-
 /*LOGIN AND SOME LEVEL OF SECURITY CHECKS */
 app.post("/api/login", (req, res) => {
     const { username, password } = req.body;
@@ -70,6 +67,58 @@ app.post("/api/login", (req, res) => {
         id: result[0].id,
     });
 });
+
+///RAWG API,
+const key = "b179d9e47daa4a9489276614fec88ef8";
+const baseURL = "https://api.rawg.io/api";
+
+const getPopularGame = () => {
+  return fetch(`${baseURL}/games?key=${key}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error('Error fetching popular games:', error);
+    });
+};
+
+const getMovieDetails = (id) => {
+  return fetch(`${baseURL}/games/${id}/movies?key=${key}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error(`Error fetching movie details for game ID ${id}:`, error);
+    });
+};
+
+const getGameListByGenreId = (id) => {
+  return fetch(`${baseURL}/games?key=${key}&genres=${id}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.json();
+    })
+    .catch(error => {
+      console.error(`Error fetching game list for genre ID ${id}:`, error);
+    });
+};
+
+export default {
+  getPopularGame,
+  getMovieDetails,
+  getGameListByGenreId
+};
+
+
+
 
 
 

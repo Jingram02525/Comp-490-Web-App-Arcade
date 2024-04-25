@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
+import particlesConfig from './config/particles.config.js';
+import Particles from "react-tsparticles";
 
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
 
 import slide_image_1 from '../assets/Atari-1.png';
@@ -19,13 +21,13 @@ import slide_image_8 from "../assets/Gba-2.jpg";
 import slide_image_9 from "../assets/Gba-3.jpg";
 import slide_image_10 from "../assets/Gba-4.jpg";
 
-
-
 function HomeSlide() {
   return (
+    <>
+    <Particles config={particlesConfig}></Particles>
+
     <div className='Container-Slide'>
-        {/* <h1 className='heading-Slide'>Retro Gallery</h1> */}
-        <Swiper
+      <Swiper
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
@@ -46,7 +48,6 @@ function HomeSlide() {
         modules={[EffectCoverflow, Pagination, Navigation]}
         className="swiper_container"
       >
-
         <SwiperSlide>
           <img src={slide_image_1} alt="slide_image" />
         </SwiperSlide>
@@ -89,7 +90,8 @@ function HomeSlide() {
         </div>
       </Swiper>
     </div>
+    </>
   );
 }
 
-export default HomeSlide
+export default HomeSlide;
