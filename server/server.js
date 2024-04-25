@@ -111,6 +111,32 @@ app.post('/signup', (req, res) => {
 });
 
 });
+
+
+
+app.post('/login', (req, res) => {
+    console.log("Received username:", req.body.username);
+    console.log("Received password:", req.body.password);
+    const { username, password } = req.body;
+
+    // Perform authentication (you need to implement your authentication logic here)
+
+    // For demonstration, let's just check if the username and password match
+    db.query('SELECT * FROM account WHERE username = ? AND pwd = ?', [username, password], (error, results) => {
+        if (error) {
+            console.error('Error during login:', error);
+            return res.status(500).json({ error: 'An error occurred while processing your request.' });
+        }
+
+        if (results.length === 0) {
+            // Username or password is incorrect
+            return res.status(401).json({ error: 'Incorrect username or password.' });
+        }
+
+        // Successful login
+        res.status(200).json({ message: 'Login successful.' });
+    });
+});
 //app.use(express.static(path.join(__dirname, 'public')));
 
 /*app.post('/signup', (req, res) => {
