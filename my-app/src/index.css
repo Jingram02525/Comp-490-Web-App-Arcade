@@ -147,6 +147,7 @@ background-color: #250E4F;
 footer a {
   color: #fff;
   text-decoration: none;
+  margin-top: 0;
 }
 
 footer a:hover {
@@ -220,9 +221,10 @@ a:active {
 
 /* ALL OF THE SLIDE FUNCTIONALITY, START */
 .Container-Slide {
-  max-width: 54rem;
-  padding: 4rem 1rem;
+  max-width: 55rem;
+  padding: 5rem 5rem;
   margin: 0 auto;
+  background-color: #3a1772;
 }
 
 .heading-Slide {
@@ -235,20 +237,6 @@ a:active {
   width: 15rem;
   height: 20rem;
   position: relative;
-}
-
-@media (max-width: 500px) {
-  .swiper_container {
-    height: 20rem;
-  }
-  .swiper-slide {
-    width: 15rem !important;
-    height: 20rem !important;
-  }
-  .swiper-slide img {
-    width: 15rem !important;
-    height: rem !important;
-  }
 }
 
 .swiper-slide img {
@@ -276,33 +264,6 @@ a:active {
   transform: translateX(-58%) !important;
 }
 
-@media (max-width: 990px) {
-  .slider-controler .swiper-button-next {
-    left: 70% !important;
-    transform: translateX(-70%) !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .slider-controler .swiper-button-next {
-    left: 80% !important;
-    transform: translateX(-80%) !important;
-  }
-}
-
-@media (max-width: 990px) {
-  .slider-controler .swiper-button-prev {
-    left: 30% !important;
-    transform: translateX(-30%) !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .slider-controler .swiper-button-prev {
-    left: 20% !important;
-    transform: translateX(-20%) !important;
-  }
-}
 
 .slider-controler .slider-arrow {
   background: var(--white);
@@ -344,4 +305,11 @@ a:active {
 #535C91
 #9290C3
 */
+/*Particles*/
+#particles canvas {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+}
 

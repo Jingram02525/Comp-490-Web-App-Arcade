@@ -4,8 +4,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import particlesConfig from './config/particles.config.js';
-import Particles from "react-tsparticles";
+
 
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 
@@ -21,11 +20,11 @@ import slide_image_8 from "../assets/Gba-2.jpg";
 import slide_image_9 from "../assets/Gba-3.jpg";
 import slide_image_10 from "../assets/Gba-4.jpg";
 
+
 function HomeSlide() {
   return (
-    <>
-    <Particles config={particlesConfig}></Particles>
-
+    <div>
+      
     <div className='Container-Slide'>
       <Swiper
         effect={'coverflow'}
@@ -90,7 +89,7 @@ function HomeSlide() {
         </div>
       </Swiper>
     </div>
-    </>
+    </div>
   );
 }
 
