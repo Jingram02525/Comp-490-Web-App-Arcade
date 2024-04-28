@@ -11,10 +11,10 @@ function App() {
  
   return (
         <Routes>
+          <Route path= '/dashboard'  element={<Home/>}></Route>
           <Route path= '/'  element={<Initial/>}></Route>
           <Route path='/login' element={<Login/>}></Route>
           <Route path='/register'  element={<Register/>}></Route>
-          <Route path= '/dashboard'  element={<Home/>}></Route>
           <Route path= '/terms' element={<Terms/>}></Route>
           <Route path= '/privacy' element={<Privacy/>}></Route>
           <Route path= '/emulator' element={<EmulatorPage/>}></Route>
