@@ -1,85 +1,88 @@
-import React, {useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import "../styles/login.css";
 
 const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    
-
-    //note: that e stands for an event, react returns a promise for the event
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      //For testing purposes
-      console.log({ username, password});
-      loginUser();
-      setUsername("");
-      setPassword("");
-    }
-    //React Router's uses this to nagivate to path's
     const navigate = useNavigate();
 
+    useEffect(() => {
+        // Create a link element for the font
+        const link = document.createElement('link');
+        link.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+        link.rel = 'stylesheet';
+        document.head.appendChild(link);
+
+        // Clean up the link when the component unmounts
+        return () => {
+            document.head.removeChild(link);
+        };
+    }, []);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log({ username, password });
+        loginUser();
+        setUsername("");
+        setPassword("");
+    };
+
     const loginUser = () => {
-      //Sending to server in a json format
-      fetch("http://localhost:8000/api/login", {
-        method: "POST",
-        body: JSON.stringify({
-          username,
-          password,
-        }),
-
-        headers: {
-          "Content-Type": "application/json",
-        },
-
-      })
+        fetch("http://localhost:8000/api/login", {
+            method: "POST",
+            body: JSON.stringify({ username, password }),
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
         .then((res) => res.json())
         .then((data) => {
-          if(data.error_message){
-            alert(data.error_message);
-          } else {
-            alert(data.message);
-            navigate("/dashboard");
-            localStorage.setItem("_id", data.id); 
-          }
+            if (data.error_message) {
+                alert(data.error_message);
+            } else {
+                alert(data.message);
+                navigate("/dashboard");
+                localStorage.setItem("_id", data.id);
+            }
         })
         .catch((err) => console.error(err));
-    }
-
+    };
 
     return (
-        <main className='login'>
-            <h1 className='loginTitle'>Log into your account</h1>
-            <form className='loginForm' onSubmit={ handleSubmit }>
-              <div className='fields'>
-                <div className='username'>
-                  <label htmlFor='username'>Username</label>
-                  <input
-                      type='text'
-                      name='username'
-                      id='username'
-                      required
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                  />
+      <div className="login-container">
+        <main className='container'>
+            <h1 className='loginTitle'>Log in</h1>
+            <form className='loginForm' onSubmit={handleSubmit}>
+                <div className='form-group'>
+                    <label htmlFor='username'>Username</label>
+                    <input
+                        type='text'
+                        name='username'
+                        id='username'
+                        required
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
                 </div>
-                <div className='password'>
-                  <label htmlFor='password'>Password</label>
-                  <input
-                      type='password'
-                      name='password'
-                      id='password'
-                      required
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                  />
+                <div className='form-group'>
+                    <label htmlFor='password'>Password</label>
+                    <input
+                        type='password'
+                        name='password'
+                        id='password'
+                        required
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
                 </div>
-              </div>
-                <button className="loginBtn">Sign In</button>
+                <button className="loginButton">Sign In</button>
                 <p>
                     Don't have an account? <Link to='/register'>Sign up</Link>
                 </p>
             </form>
         </main>
+      </div>
     );
 }
 

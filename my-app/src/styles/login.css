@@ -1,0 +1,70 @@
+.login-container {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #640ec5;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('https://example.com/retro-bg.png');
+    background-repeat: repeat;
+}
+
+.login-container .container {
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #00ff00;
+    max-width: 460px;  
+    margin: auto;      
+}
+
+.login-container .form-group {
+    margin-bottom: 15px;
+}
+
+.login-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+}
+
+.login-container input[type="text"],
+.login-container input[type="email"],
+.login-container input[type="password"] {
+    width: 95%;
+    margin: auto;
+    padding: 8px;
+    background: #222;
+    border: 1px solid #00ff00;
+    color: #fff;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 4px;
+}
+
+.login-container button.loginButton {
+    width: 95%;
+    padding: 10px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-container button.loginButton:hover {
+    background-color: #cc0000;
+}
+
+.login-container .error-message {
+    color: red;
+    margin-top: 5px;
+}
+
+.login-container .container h1 {
+    color: white;
+    font-size:69px;
+}

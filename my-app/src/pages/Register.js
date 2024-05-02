@@ -1,11 +1,25 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from 'react';
+import "../styles/signup.css";
 
 
 const Register = () =>{
     const [ username, setUsername ] = useState("");
     const [ email, setEmail ] = useState("");
     const [ password, setPassword ] = useState("");
+
+    useEffect(() => {
+        const fontLink = document.createElement('link');
+        fontLink.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap';
+        fontLink.rel = 'stylesheet';
+        document.head.appendChild(fontLink);
+
+        return () => {
+            document.head.removeChild(fontLink);
+        };
+    }, []);
+    
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -45,8 +59,9 @@ const Register = () =>{
 
     return (
         <main className='register'>
-            <h1 className='registerTitle'>Create an account</h1>
+            
             <form className='registerForm' onSubmit={handleSubmit}>
+                <h1 className='registerTitle'>Sign up!</h1>
                 <label htmlFor='username'>Username</label>
                 <input
                     type='text'

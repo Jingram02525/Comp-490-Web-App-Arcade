@@ -1,0 +1,59 @@
+.register {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #640ec5; /* You might choose a slightly different shade for differentiation */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 20px;
+}
+.register h1 {
+    font-size: 30px;
+    margin-top: 0;  
+}
+
+.register .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #00ff00; /* Neon green, similar to the login page */
+    width: 100%;
+    max-width: 360px;
+}
+
+.register label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.8em;
+}
+
+.register input[type="text"],
+.register input[type="email"],
+.register input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px; /* Adding some space between inputs */
+    background: #222;
+    border: 1px solid #00ff00;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.register .registerBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff0000; /* Bright red, similar to login button */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register .registerBtn:hover {
+    background-color: #cc0000;
+}
