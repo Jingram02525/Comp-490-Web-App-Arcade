@@ -111,11 +111,11 @@ const getGameListByGenreId = (id) => {
     });
 };
 
-export default {
-  getPopularGame,
-  getMovieDetails,
-  getGameListByGenreId
-};
+//export default {
+//  getPopularGame,
+//  getMovieDetails,
+ // getGameListByGenreId
+//};
 
 
 
