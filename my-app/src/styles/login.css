@@ -2,14 +2,20 @@
     font-family: 'Press Start 2P', cursive;
     background-color: #640ec5;
     color: #fff;
-    margin: 0;
-    padding: 0;
+    margin: 0;    
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-image: url('https://example.com/retro-bg.png');
     background-repeat: repeat;
+    flex-direction:column;
+    width: 100%; 
+    padding: 0; 
+    box-sizing: border-box;
+    margin-left: 0;  /* Resets any default margin */
+    margin-right: 0; 
+    
 }
 
 .login-container .container {
@@ -68,3 +74,5 @@
     color: white;
     font-size:69px;
 }
+
+

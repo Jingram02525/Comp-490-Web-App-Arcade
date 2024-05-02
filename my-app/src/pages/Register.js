@@ -58,6 +58,7 @@ const Register = () =>{
 
 
     return (
+        
         <main className='register'>
             
             <form className='registerForm' onSubmit={handleSubmit}>

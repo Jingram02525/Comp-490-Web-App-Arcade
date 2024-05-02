@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Navbar from '../components/Navbar'
 import "../styles/login.css";
 
 const Login = () => {
@@ -50,8 +51,11 @@ const Login = () => {
     };
 
     return (
+      
       <div className="login-container">
+        <Navbar />
         <main className='container'>
+          
             <h1 className='loginTitle'>Log in</h1>
             <form className='loginForm' onSubmit={handleSubmit}>
                 <div className='form-group'>
