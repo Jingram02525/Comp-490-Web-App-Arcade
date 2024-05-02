@@ -32,7 +32,7 @@ const Navbar = () => {
           </button>
         </div>
         <div className="nav-links">
-          <Link to="/roms" className='button text-red-500 hover:bg-red-500 hover:text-[white] hover:border-red-500'>ROMs</Link>
+          <Link to="/Roms" className='button text-red-500 hover:bg-red-500 hover:text-[white] hover:border-red-500'>ROMs</Link>
           <Link to="/Emulator" className='button text-green-400 hover:bg-green-400 hover:text-[white] hover:border-green-400'>EMULATORS</Link>
           <button
             className='button text-sky-500 hover:bg-sky-500 hover:text-[white] hover:border-sky-500'
