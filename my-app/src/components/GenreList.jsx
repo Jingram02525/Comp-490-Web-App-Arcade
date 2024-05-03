@@ -1,5 +1,5 @@
 import React from 'react'
-import GlobalApi from '../Services/GlobalApi'
+import GlobalApi from '../Services/GlobalAPi.jsx'
 import { useEffect, useState } from 'react'
 
 // I don't understand why my tailwind css doesn't work properly for hover effects??
