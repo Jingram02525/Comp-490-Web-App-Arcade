@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from 'react'
+/*Simport React, { useContext, useState, useEffect } from 'react'
 import { HiMoon, HiOutlineMagnifyingGlass, HiSun } from "react-icons/hi2";
 import { ThemeContext } from "../Context/ThemeContext";
 
@@ -30,3 +30,4 @@ export const Header = () => {
     </div>
   )
 }
+*/
