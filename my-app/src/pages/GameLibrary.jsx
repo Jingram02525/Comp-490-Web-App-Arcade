@@ -3,6 +3,7 @@ import { Header } from "../components/Header";
 import {ThemeContext } from "../Context/ThemeContext";
 import  GamesHome from "./GamesHome";
 import NavBar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const GameLibrary = () => {
   const [count, setCount] = useState(0);
@@ -12,10 +13,11 @@ const GameLibrary = () => {
   }, [])
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
-    <div className={`${theme} ${theme == 'dark'? 'bg-[#121212] min-h-[100vh]': 'bg-white min-h-[100vh]'}`}>
+    <div className={`${theme} ${theme == 'dark'? 'bg-[#100525] min-h-[100vh]': 'bg-white min-h-[100vh]'}`}>
       <NavBar/>
       <Header />
       <GamesHome />
+      <Footer/>
     </div>
     </ThemeContext.Provider>
   )

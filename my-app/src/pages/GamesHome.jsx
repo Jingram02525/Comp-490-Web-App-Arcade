@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react'
 import GenreList from '../components/GenreList'
 import GlobalApi from '../Services/GlobalApi'
 import Banner from '../components/Banner';
+import TrendingGames from '../components/TrendingGames';
 
 const GamesHome = () => {
   const [allGamesList, setAllGamesList] = useState();
@@ -23,7 +24,10 @@ const GamesHome = () => {
       </div>
       <div className='col-span-3'>
         {allGamesList?.length>0?
-        <Banner gameBanner={allGamesList[0]}/>
+        <div>
+          <Banner gameBanner={allGamesList[0]}/>
+          <TrendingGames gameList={allGamesList}/>
+        </div>
         :null}
       </div>
     </div>
