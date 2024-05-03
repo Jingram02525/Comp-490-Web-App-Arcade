@@ -1,18 +1,23 @@
 .Container-Slide {
+    color: transparent;
     position: relative;
     width: 100%; /* Adjust based on your layout */
     height: 100%; /* Adjust based on your layout */
 }
 
 .swiper-button-prev, .swiper-button-next {
+
+    border-color: #48ff00;
+    border-width: 1px;
+    font-size: 1px;
    
     position: relative;
     transform: translateY(-50%);
     z-index: 10;
-    background-color: #fff;
-    color: #000;
+    background-color: #000000;
+    color: #48ff00;
     width: 30px;
-    height: 50px;
+    height: 350px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -22,16 +27,18 @@
 }
 
 .swiper-button-prev {
+   
  
-    left: -390px; /* Moves the button towards the left edge */
+    left: -400px; /* Moves the button towards the left edge */
     top: -200px;
 }
 
 .swiper-button-next {
      /* Moves the button towards the right edge */
+     
    
-     right: 250px;
-     top: -227px;
+     right: 200px;
+     top: -375px;
 }
 
 ion-icon {

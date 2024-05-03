@@ -79,8 +79,8 @@ function HomeSlide() {
 
         </Swiper>
             <div className="slider-controler">
-                <div className="swiper-button-prev">&#8678;</div>
-                <div className="swiper-button-next">&#8680;</div>
+                <div className="swiper-button-prev"></div>
+                <div className="swiper-button-next"></div>
             </div>
             <div className="swiper-pagination"></div>
         </div>
