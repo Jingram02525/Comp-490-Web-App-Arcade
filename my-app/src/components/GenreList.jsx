@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 // I don't understand why my tailwind css doesn't work properly for hover effects??
 
-const GenreList = () => {
+const GenreList = ({genresId,selectedGenresName}) => {
 
     const [genreList, setGenreList] = useState([]);
     const [activeIndex, setActiveIndex] = useState(0);
@@ -23,7 +23,7 @@ const GenreList = () => {
         <h2 className='text-[30px] font-bold dark:text-white'>Genre</h2>
         {genreList.map((item, index) =>(
             <div
-            onClick={()=>setActiveIndex(index)} 
+            onClick={()=>{setActiveIndex(index);genresId(item.id); selectedGenresName(item.name)}} 
             className={`flex gap-2 items-center mb-2 cursor-pointer 
                           hover:bg-gray-300 p-2 rounded-lg
                           hover:dark:bg-gray-600

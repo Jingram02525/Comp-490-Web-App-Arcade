@@ -3,12 +3,16 @@ import GenreList from '../components/GenreList'
 import GlobalApi from '../Services/GlobalApi'
 import Banner from '../components/Banner';
 import TrendingGames from '../components/TrendingGames';
+import GamesByGenresId from '../components/GamesByGenresId';
 
 const GamesHome = () => {
   const [allGamesList, setAllGamesList] = useState();
+  const [gameListByGenres, setGameListByGenres] = useState([]);
+  const [selectedGenresName, setSelectedGenresName] = useState('Action');
+
   useEffect(()=>{
     getAllGamesList();
-    getGamesListByGenresId();
+    getGamesListByGenresId(4);//defualt value
   }, []);
 
   const getAllGamesList = () =>{
@@ -19,8 +23,10 @@ const GamesHome = () => {
   };
 
   const getGamesListByGenresId= (id) =>{
-    GlobalApi.getGameListByGenreId(4).then((resp) => {
+      console.log("GenreId:",id);
+      GlobalApi.getGameListByGenreId(id).then((resp) => {
       console.log("Game List By GenreId: ",resp.data.results);
+      setGameListByGenres(resp.data.results);
     });
   }
 
@@ -29,13 +35,17 @@ const GamesHome = () => {
   return (
     <div className='grid grid-cols-4 px-8'>
       <div className='h-full hidden md:block'>
-        <GenreList/>
+        <GenreList genresId={(genresId)=>getGamesListByGenresId(genresId)}
+                   selectedGenresName={(name)=>setSelectedGenresName(name)}
+        />
       </div>
       <div className='col-span-3'>
-        {allGamesList?.length>0?
+        {allGamesList?.length>0&& gameListByGenres.length > 0?
         <div>
           <Banner gameBanner={allGamesList[0]}/>
           <TrendingGames gameList={allGamesList}/>
+          <GamesByGenresId gameList={gameListByGenres}
+          selectedGenresName={selectedGenresName}/>
         </div>
         :null}
       </div>
