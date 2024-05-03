@@ -7,5 +7,7 @@ const axiosCreate= axios.create({
 //Doc => https://api.rawg.io/docs/
 const getGenreList=axiosCreate.get('/genres?key='+key);
 const getAllGames=axiosCreate.get('/games?key='+key);
+//Fixed: bug forgot to pass key and id
+const getGameListByGenreId=(id)=>axiosCreate.get('/games?key='+key+'&genres='+id);
 
-export default { getGenreList, getAllGames }
+export default { getGenreList, getAllGames, getGameListByGenreId }

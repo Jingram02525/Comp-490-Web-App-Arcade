@@ -8,6 +8,7 @@ const GamesHome = () => {
   const [allGamesList, setAllGamesList] = useState();
   useEffect(()=>{
     getAllGamesList();
+    getGamesListByGenresId();
   }, []);
 
   const getAllGamesList = () =>{
@@ -16,6 +17,14 @@ const GamesHome = () => {
       setAllGamesList(resp.data.results);
     })
   };
+
+  const getGamesListByGenresId= (id) =>{
+    GlobalApi.getGameListByGenreId(4).then((resp) => {
+      console.log("Game List By GenreId: ",resp.data.results);
+    });
+  }
+
+
 //We have to add condition because the below banner is executing before fetching from api server, above
   return (
     <div className='grid grid-cols-4 px-8'>
