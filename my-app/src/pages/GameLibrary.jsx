@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Header } from "../components/Header";
 import {ThemeContext } from "../Context/ThemeContext";
-import  GamesHome from "../pages/GamesHome";
+import  GamesHome from "./GamesHome";
 import NavBar from "../components/Navbar";
 
 const GameLibrary = () => {
@@ -12,7 +12,7 @@ const GameLibrary = () => {
   }, [])
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
-    <div className={`${theme} ${theme == 'dark'? 'bg-[#121212] h-[100vh]': 'bg-white'}`}>
+    <div className={`${theme} ${theme == 'dark'? 'bg-[#121212] min-h-[100vh]': 'bg-white min-h-[100vh]'}`}>
       <NavBar/>
       <Header />
       <GamesHome />
