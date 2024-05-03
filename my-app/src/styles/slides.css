@@ -9,19 +9,18 @@
 
     border-color: #48ff00;
     border-width: 1px;
-    font-size: 1px;
-   
-    position: relative;
-    transform: translateY(-50%);
+    font-size: 1px;  
+    
+    
     z-index: 10;
     background-color: #000000;
     color: #48ff00;
-    width: 30px;
+    width: 35px;
     height: 350px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    
+    
+    top: -430px;
+   
     border-radius: 15px;
     cursor: pointer;
 }
@@ -29,16 +28,16 @@
 .swiper-button-prev {
    
  
-    left: -400px; /* Moves the button towards the left edge */
-    top: -200px;
+    left: -100px; /* Moves the button towards the left edge */
+    
 }
 
 .swiper-button-next {
      /* Moves the button towards the right edge */
      
    
-     right: 200px;
-     top: -375px;
+     margin-left: 380px;
+     
 }
 
 ion-icon {
@@ -47,13 +46,6 @@ ion-icon {
 }
 
 .swiper_container {
-    padding: 0 50px; 
+    padding: 50px; 
 }
 
-@media (max-width: 768px) {
-    .swiper-button-prev, .swiper-button-next {
-        width: 30px;
-        height: 30px;
-        font-size: 15px; /* Adjust icon size for smaller devices */
-    }
-}
