@@ -7,6 +7,9 @@ import Privacy from './pages/Privacy';
 import Initial from './pages/Initial';
 import EmulatorPage from './pages/EmulatorPage';
 import GameLibrary from './pages/GameLibrary';
+import GameDetail from './pages/GameDetail';
+import Search from './components/Search';
+import Results from './components/Results';
 
 function App() {
  
@@ -20,6 +23,9 @@ function App() {
           <Route path= '/privacy' element={<Privacy/>}></Route>
           <Route path= '/emulator' element={<EmulatorPage/>}></Route>
           <Route path= '/Roms' element={<GameLibrary/>}></Route>
+          <Route path="/search" element={<Search/>}></Route>
+          <Route path="/searchResult" element={<Results/>}></Route>
+          <Route path= '/game/:name' element={<GameDetail/>}></Route>
         </Routes>
   );
 }
