@@ -21,7 +21,7 @@ const GamesHome = () => {
       <div className='h-full hidden md:block'>
         <GenreList/>
       </div>
-      <div className='col-span-3 bg-blue-400'>
+      <div className='col-span-3'>
         {allGamesList?.length>0?
         <Banner gameBanner={allGamesList[0]}/>
         :null}
