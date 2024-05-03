@@ -48,4 +48,26 @@ ion-icon {
 .swiper_container {
     padding: 50px; 
 }
+@media (max-width: 768px) {
+    .swiper-button-prev, .swiper-button-next {
+        width: 20px; 
+        height: 100px; 
+        top: -260px; 
+    }
 
+    .swiper-button-prev {
+        left: -20px; 
+    }
+
+    .swiper-button-next {
+        margin-left: 230px; 
+    }
+
+    ion-icon {
+        font-size: 15px; 
+    }
+
+    .swiper_container {
+        padding: 20px; 
+    }
+}

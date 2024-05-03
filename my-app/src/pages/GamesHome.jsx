@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import GenreList from '../components/GenreList'
-import GlobalApi from '../Services/GlobalApi'
+import GlobalApi from '../Services/GlobalAPi'
 import Banner from '../components/Banner';
 
 const GamesHome = () => {
