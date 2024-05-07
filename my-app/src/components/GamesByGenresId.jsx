@@ -18,6 +18,7 @@ const GamesByGenresId = ({gameList, selectedGenresName}) => {
               </div>
           ))};
       </div>
+      <br/><br/><br/><br/>
     </div>
   )
 }
