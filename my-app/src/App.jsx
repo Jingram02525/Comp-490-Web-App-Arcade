@@ -8,6 +8,7 @@ import Initial from './pages/Initial';
 import EmulatorPage from './pages/EmulatorPage';
 import GameLibrary from './pages/GameLibrary';
 import GameDetail from './pages/GameDetail';
+import GameDetailById from './pages/GameDetailById';
 import Search from './components/Search';
 import Results from './components/Results';
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/search" element={<Search/>}></Route>
           <Route path="/searchResult" element={<Results/>}></Route>
           <Route path= '/game/:name' element={<GameDetail/>}></Route>
+          <Route path= '/game/:id' element={<GameDetailById/>}></Route>
         </Routes>
   );
 }

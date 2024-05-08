@@ -7,7 +7,7 @@ import Footer from './Footer';
 const Results = (props) => {
   const location = useLocation();
   const gameResults = location.state ? location.state.gameResults : [];
-
+  
   return (
     <div>
       <Navbar/>
