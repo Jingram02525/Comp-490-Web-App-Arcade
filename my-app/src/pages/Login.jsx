@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import "../styles/login.css";
+import ParticlesComponent from '../components/ParticlesComponent'
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -45,52 +46,51 @@ const Login = () => {
             } else {
                 alert(data.message);
                 navigate("/dashboard");
-                localStorage.setItem("_id", data.id);
+                localStorage.setItem("username", username); // Saving username to localStorage
             }
         })
         .catch((err) => console.error(err));
     };
 
     return (
-      <div >
+      <>
+        <ParticlesComponent id="particles"/>
         <Navbar />
-      <div className="login-container">
-        
-        <main className='container'>
-          
-            <h1 className='loginTitle'>Log in</h1>
-            <form className='loginForm' onSubmit={handleSubmit}>
-                <div className='form-group'>
-                    <label htmlFor='username'>Username</label>
-                    <input
-                        type='text'
-                        name='username'
-                        id='username'
-                        required
-                        value={username}
-                        onChange={(e) => setUsername(e.target.value)}
-                    />
-                </div>
-                <div className='form-group'>
-                    <label htmlFor='password'>Password</label>
-                    <input
-                        type='password'
-                        name='password'
-                        id='password'
-                        required
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                </div>
-                <button className="loginButton">Sign In</button>
-                <p>
-                    Don't have an account? <Link to='/register'>Sign up</Link>
-                </p>
-            </form>
-        </main>
-      </div>
-      <Footer />
-    </div>
+        <div className="login-container">
+            <main className='container'>
+                <h1 className='loginTitle'>Log in</h1>
+                <form className='loginForm' onSubmit={handleSubmit}>
+                    <div className='form-group'>
+                        <label htmlFor='username'>Username</label>
+                        <input
+                            type='text'
+                            name='username'
+                            id='username'
+                            required
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                    </div>
+                    <div className='form-group'>
+                        <label htmlFor='password'>Password</label>
+                        <input
+                            type='password'
+                            name='password'
+                            id='password'
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                    </div>
+                    <button className="loginButton">Sign In</button>
+                    <p>
+                        Don't have an account? <Link to='/register'>Sign up</Link>
+                    </p>
+                </form>
+            </main>
+        </div>
+        <Footer />
+      </>
     );
 }
 

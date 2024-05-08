@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import "../styles/signup.css";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import ParticlesComponent from '../components/ParticlesComponent'
 
 
 const Register = () =>{
@@ -60,8 +61,9 @@ const Register = () =>{
 
 
     return (
-        <div >
+        <>
         <Navbar />
+        <ParticlesComponent id="particles"/>
         <main className='register'>
             
             <form className='registerForm' onSubmit={handleSubmit}>
@@ -95,12 +97,12 @@ const Register = () =>{
                 />
                 <button className='registerBtn'>Sign Up</button>
                 <p>
-                    Already have an account? <Link to='/'>Sign in</Link>
+                    Already have an account? <Link to='/login'>Sign in</Link>
                 </p>
             </form>
         </main>
         <Footer />
-    </div>
+    </>
     );
 }
 
