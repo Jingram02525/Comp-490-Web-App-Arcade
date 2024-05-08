@@ -2,19 +2,18 @@
     font-family: 'Press Start 2P', cursive;
     background-color: #640ec5;
     color: #fff;
-    margin: 0;    
+     
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height:  85vh;
     background-image: url('https://example.com/retro-bg.png');
-    background-repeat: repeat;
+   
     flex-direction:column;
-    width: 100%; 
+    
     padding: 0; 
     box-sizing: border-box;
-    margin-left: 0;  /* Resets any default margin */
-    margin-right: 0; 
+  
     
 }
 
@@ -24,18 +23,20 @@
     padding: 20px;
     border-radius: 8px;
     border: 2px solid #00ff00;
-    max-width: 460px;  
+    max-width: 360px;
+     
     margin: auto;      
 }
 
 .login-container .form-group {
     margin-bottom: 15px;
+    text-align: center;
 }
 
 .login-container label {
     display: block;
     margin-bottom: 5px;
-    font-size: 0.8em;
+   
 }
 
 .login-container input[type="text"],
@@ -49,6 +50,7 @@
     color: #fff;
     font-family: 'Press Start 2P', cursive;
     border-radius: 4px;
+    font-size: small;
 }
 
 .login-container button.loginButton {
@@ -72,7 +74,9 @@
 
 .login-container .container h1 {
     color: white;
-    font-size:69px;
+    font-size:30px;
+    text-align: center;
+    
 }
 
 

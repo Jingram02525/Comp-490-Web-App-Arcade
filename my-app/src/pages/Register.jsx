@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from 'react';
 import "../styles/signup.css";
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 
 
 const Register = () =>{
@@ -58,7 +60,8 @@ const Register = () =>{
 
 
     return (
-        
+        <div >
+        <Navbar />
         <main className='register'>
             
             <form className='registerForm' onSubmit={handleSubmit}>
@@ -96,6 +99,8 @@ const Register = () =>{
                 </p>
             </form>
         </main>
+        <Footer />
+    </div>
     );
 }
 
