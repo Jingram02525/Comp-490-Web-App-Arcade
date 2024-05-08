@@ -23,7 +23,17 @@
    
     border-radius: 15px;
     cursor: pointer;
+
+
+    transition: all 0.3s ease;
 }
+
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+    width: 45px; /* Increase width on hover */
+    height: 360px; /* Increase height on hover */
+}
+
 
 .swiper-button-prev {
    
