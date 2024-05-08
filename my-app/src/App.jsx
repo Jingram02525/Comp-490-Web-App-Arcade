@@ -11,6 +11,7 @@ import GameDetail from './pages/GameDetail';
 import GameDetailById from './pages/GameDetailById';
 import Search from './components/Search';
 import Results from './components/Results';
+import Copyright from './pages/Copyright/Copyright';
 
 function App() {
  
@@ -28,6 +29,7 @@ function App() {
           <Route path="/searchResult" element={<Results/>}></Route>
           <Route path= '/game/:name' element={<GameDetail/>}></Route>
           <Route path= '/game/:id' element={<GameDetailById/>}></Route>
+          <Route path= '/copyright' element={<Copyright/>}></Route>
         </Routes>
   );
 }
