@@ -36,27 +36,21 @@ const Register = () =>{
     const navigate = useNavigate();
 
     const signUp = () => {
-        fetch("http://localhost:8000/api/register", {
+        fetch("/api/register", {
             method: "POST",
-            body: JSON.stringify({
-                email,
-                password,
-                username,
-            }),
-            headers: { 
-                "Content-Type": "application/json",
-            },
+            body: JSON.stringify({ email, password, username }),
+            headers: { "Content-Type": "application/json" },
         })
-            .then(res => res.json())
-            .then(data => {
-                if(data.error_message){
-                    alert(data.error_message);
-                } else {
-                    alert("Account created successfully!");
-                    navigate("/login"); //Takes me to login page
-                }   
-            })
-            .catch(err => console.error(err));
+        .then(res => res.json())
+        .then(data => {
+            if (data.error_message) {
+                alert(data.error_message);
+            } else {
+                alert("Account created successfully!");
+               
+            }
+        })
+        .catch(err => console.error(err));
     };
 
 
