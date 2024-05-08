@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 85vh;
     padding: 20px;
 }
 .register h1 {
@@ -42,6 +42,7 @@
     border: 1px solid #00ff00;
     color: #fff;
     border-radius: 4px;
+    font-size: small;
 }
 
 .register .registerBtn {

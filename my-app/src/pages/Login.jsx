@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import "../styles/login.css";
 
 const Login = () => {
@@ -51,9 +52,10 @@ const Login = () => {
     };
 
     return (
-      
-      <div className="login-container">
+      <div >
         <Navbar />
+      <div className="login-container">
+        
         <main className='container'>
           
             <h1 className='loginTitle'>Log in</h1>
@@ -87,6 +89,8 @@ const Login = () => {
             </form>
         </main>
       </div>
+      <Footer />
+    </div>
     );
 }
 
