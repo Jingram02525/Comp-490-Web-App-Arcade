@@ -74,7 +74,7 @@ const Register = () => {
     return (
         <>
             <Navbar />
-            <ParticlesComponent id="particles" />
+            {/* <ParticlesComponent id="particles" /> */}
             <main className='register'>
                 <form className='registerForm' onSubmit={handleSubmit}>
                     <h1 className='registerTitle'>Sign up!</h1>
