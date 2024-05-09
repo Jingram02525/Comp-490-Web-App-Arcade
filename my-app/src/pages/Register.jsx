@@ -4,7 +4,7 @@ import { useEffect } from 'react';
 import "../styles/signup.css";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
-import ParticlesComponent from '../components/ParticlesComponent'
+import ParticlesComponent from '../components/ParticlesComponent2'
 
 
 const Register = () =>{

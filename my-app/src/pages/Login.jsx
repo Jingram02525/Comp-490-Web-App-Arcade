@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import "../styles/login.css";
-import ParticlesComponent from '../components/ParticlesComponent'
+import ParticlesComponent from '../components/ParticlesComponent2'
 
 const Login = () => {
     const [username, setUsername] = useState("");

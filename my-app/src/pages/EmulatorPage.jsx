@@ -1,4 +1,5 @@
 import React from 'react';
+import ParticlesComponent from '../components/ParticlesComponent2'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Emulators from '../components/Emulators'
@@ -8,6 +9,7 @@ const EmulatorPage = () => {
         <>
         <Navbar />
         <Emulators />
+        <ParticlesComponent id="particles"/>
         <Footer/>
         </>
     );
