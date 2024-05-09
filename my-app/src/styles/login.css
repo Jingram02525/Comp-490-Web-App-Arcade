@@ -77,3 +77,10 @@
 }
 
 
+.login-container .rtext{
+    color: #00ff00;
+}
+
+.login-container .rtext:hover{
+    color: #00af00;
+}

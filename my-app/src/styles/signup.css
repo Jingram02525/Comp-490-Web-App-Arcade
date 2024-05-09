@@ -65,3 +65,19 @@
     font-size: xx-small;
     margin: 6px;
 }
+
+.register .ttext{
+    color: #00ff00;
+}
+
+.register .ttext:hover{
+    color: #00af00;
+}
+
+.register  .ltext{
+    color: #00ff00;
+}
+
+.register .ltext:hover{
+    color: #00af00;
+}

@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/signup.css";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import ParticlesComponent from '../components/ParticlesComponent2';
+import ParticlesComponent from '../components/ParticlesComponent';
 const ParticlesComponentMemo = React.memo(ParticlesComponent);
 
 const Register = () => {
@@ -127,11 +127,11 @@ const Register = () => {
                             onChange={(e) => setIsAgreed(e.target.checked)}
                             required
                         />
-                        By clicking on the checkbox you agree to the <Link to="/terms">Terms and Conditions</Link>
+                        By clicking on the checkbox you agree to the <Link className="ttext" to="/terms">Terms and Conditions</Link>
                     </div>
                     <button className='registerBtn'>Sign Up</button>
                     <p>
-                        Already have an account? <Link to='/login'>Sign in</Link>
+                        Already have an account? <Link  className="ltext" to='/login'>Sign in</Link>
                     </p>
                 </form>
             </main>

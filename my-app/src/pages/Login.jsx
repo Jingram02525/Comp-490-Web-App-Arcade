@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import "../styles/login.css";
-import ParticlesComponent from '../components/ParticlesComponent2'
+import ParticlesComponent from '../components/ParticlesComponent'
 const ParticlesComponentMemo = React.memo(ParticlesComponent);
 
 const Login = () => {
@@ -87,7 +87,7 @@ const Login = () => {
                     </div>
                     <button className="loginButton">Sign In</button>
                     <p>
-                        Don't have an account? <Link to='/register'>Sign up</Link>
+                        Don't have an account? <Link className="rtext" to='/register'>Sign up</Link>
                     </p>
                 </form>
             </main>
