@@ -13,7 +13,7 @@ const GameLibrary = () => {
   }, [])
   return (
     <ThemeContext.Provider value={{theme, setTheme}}>
-    <div className={`${theme} ${theme == 'dark'? 'bg-[#100525] min-h-[100vh]': 'bg-slate-200 min-h-[100vh]'}`}>
+    <div className={`${theme} ${theme == 'dark'? 'bg-[#250E4F] min-h-[100vh]': 'bg-slate-200 min-h-[100vh]'}`}>
       <NavBar/>
       <Header />
       <GamesHome />

@@ -15,7 +15,7 @@ const GameDetail = () => {
     // Retrieve the theme from localStorage
     const theme = localStorage.getItem('theme');
     // Set the background color based on the retrieved theme
-    document.body.style.backgroundColor = theme === 'light' ? '#e5e7eb' : '#100525';
+    document.body.style.backgroundColor = theme === 'light' ? '#e5e7eb' : '#250E4F';
   }, []);
 
   // Determine the text color class based on the theme
