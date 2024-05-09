@@ -1,0 +1,144 @@
+.button {
+  background-color: #250E4F;
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.button + .button {
+  margin-left: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1E0B41;
+  color: #fff;
+  padding: 20px;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.logo-text {
+  margin-left: 8px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  background-color: #250E4F;
+  color: white;
+  font-family: "Kode Mono", monospace;
+}
+
+.search-bar button {
+  padding: 10px 20px;
+  background-color: #250E4F;
+  color: #fb923c;
+  border: none;
+  border-radius: 3px;
+  margin-left: 5px;
+  font-family: "Kode Mono", monospace;
+  font-weight: bold;
+  border-bottom-style: solid;
+}
+
+.search-bar button:hover {
+  background-color: #fb923c;
+  color: white;
+  border-color: #fb923c;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links li {
+  margin-right: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.navbar-links li a {
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #250E4F;
+  padding: 10px 20px;
+  font-family: "Kode Mono", monospace;
+}
+
+.roms {
+  color: #EF4444;
+  border-bottom-style: solid;
+}
+
+.roms:hover {
+  background-color: #EF4444;
+  color: white;
+  border-color: #EF4444;
+}
+
+.emu {
+  color: #4ade80;
+  border-bottom-style: solid;
+}
+
+.emu:hover {
+  background-color: #4ade80;
+  color: white;
+  border-color: #4ade80;
+}
+
+.login {
+  color: #0ea5e9;
+  border-bottom-style: solid;
+}
+
+.login:hover {
+  background-color: #0ea5e9;
+  color: white;
+  border-color: #0ea5e9;
+}
+
+.signup {
+  color: #eab308;
+  border-bottom-style: solid;
+}
+
+.signup:hover {
+  background-color: #eab308;
+  color: white;
+  border-color: #eab308;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+
+}

@@ -1,0 +1,84 @@
+.emulators main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center; /* Center the text horizontally */
+  flex-grow: 1;
+}
+.emulators main, h1{
+    color: #4ade80;
+    font-size: 55px;
+    border-bottom-style: solid;
+  }
+  
+  .console-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .slider-container {
+    overflow-x: scroll;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .console-container {
+    display: inline-flex;
+  }
+  
+  .console {
+    background-color: #fff;
+    color: #4ade80;
+    border: none;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Added box-shadow transition */
+    box-shadow: 0 0 10px #4ade80; /* Added red shadow effect */
+    text-decoration: none; /* Remove underline from anchor tags */
+  }
+  
+  .console h2 {
+      font-size: 24px;
+      margin: 10px 0;
+      color: #4ade80;
+      font-family: "Press Start 2P", system-ui;
+  }
+  
+  .console img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      background-color: white;
+  }
+  
+  .console:hover {
+      background-color: #4ade80; /* Change background color on hover */
+      color: white; /* Change text color on hover */
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #4ade80; /* Increase shadow size on hover */
+  }
+  
+  .console:hover h2 {
+      color: white; /* Change header text color on hover */
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
