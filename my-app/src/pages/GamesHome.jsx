@@ -1,5 +1,6 @@
 // Import React and necessary hooks
 import React, { useState, useEffect } from 'react';
+import ParticlesComponent from '../components/ParticlesComponent2'
 
 // Import components and services
 import GenreList from '../components/GenreList';
@@ -44,23 +45,23 @@ const GamesHome = () => {
 
   // Render the component
   return (
-    <div className='grid grid-cols-4 px-8'>
-      <div className='h-full hidden md:block'>
-        <GenreList
-          genresId={(genresId) => getGamesListByGenresId(genresId)}
-          selectedGenresName={(name) => setSelectedGenresName(name)}
-        />
+      <div className='grid grid-cols-4 px-8'>
+        <div className='h-full hidden md:block'>
+          <GenreList
+            genresId={(genresId) => getGamesListByGenresId(genresId)}
+            selectedGenresName={(name) => setSelectedGenresName(name)}
+          />
+        </div>
+        <div className='col-span-3'>
+          {allGamesList.length > 0 && gameListByGenres.length > 0 ?
+            <div>
+              <Banner gameBanner={randomGame} />
+              <TrendingGames gameList={allGamesList} />
+              <GamesByGenresId gameList={gameListByGenres} selectedGenresName={selectedGenresName} />
+            </div>
+            : null}
+        </div>
       </div>
-      <div className='col-span-3'>
-        {allGamesList.length > 0 && gameListByGenres.length > 0 ?
-          <div>
-            <Banner gameBanner={randomGame} />
-            <TrendingGames gameList={allGamesList} />
-            <GamesByGenresId gameList={gameListByGenres} selectedGenresName={selectedGenresName} />
-          </div>
-          : null}
-      </div>
-    </div>
   );
 };
 

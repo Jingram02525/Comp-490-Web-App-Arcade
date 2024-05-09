@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "../styles/signup.css";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import ParticlesComponent from '../components/ParticlesComponent';
+import ParticlesComponent from '../components/ParticlesComponent2';
 
 const Register = () => {
     const [username, setUsername] = useState("");

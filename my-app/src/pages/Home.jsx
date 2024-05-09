@@ -8,7 +8,7 @@ export default function Home() {
         <>
             <Navbar />
             <Main />
-            <ParticlesComponent id="particles" backgroundColor="#721725" />
+            <ParticlesComponent id="particles" backgroundColor="" />
             <Footer />
         </>
     );
