@@ -2,7 +2,7 @@ import React from 'react';
 
 const Emulators = () => {
   return (
-    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 ">
       <h1 className="text-4xl font-extrabold text-center text-green-500 mb-8">Emulators</h1>
       <section className="flex flex-wrap justify-center">
         <div className="overflow-x-auto whitespace-nowrap">

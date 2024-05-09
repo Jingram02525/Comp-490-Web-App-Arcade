@@ -1,3 +1,4 @@
+// Import React and necessary hooks
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import GameVideos from '../components/GameVideos';
@@ -14,11 +15,14 @@ const GameDetail = () => {
     // Retrieve the theme from localStorage
     const theme = localStorage.getItem('theme');
     // Set the background color based on the retrieved theme
-    document.body.style.backgroundColor = theme === 'light' ? '#FFFFFF' : '#100525';
+    document.body.style.backgroundColor = theme === 'light' ? '#e5e7eb' : '#100525';
   }, []);
 
   // Determine the text color class based on the theme
   const textColorClass = localStorage.getItem('theme') === 'light' ? 'text-black' : 'text-white';
+
+  // Filter the tags to include only those in English
+  const englishTags = game.tags.filter(tag => tag.language === 'eng');
 
   return (
     <div>
@@ -35,7 +39,7 @@ const GameDetail = () => {
             <h3 className={`${textColorClass} mb-2`}>Genre(s):</h3>
             <div className="flex flex-wrap">
               {game.genres.map((genre) => (
-                <span key={genre.id} className={`${textColorClass} bg-gray-600 px-2 py-1 rounded-md mr-2 mb-2`}>
+                <span key={genre.id} className={`text-white bg-gray-600 px-2 py-1 rounded-md mr-2 mb-2`}>
                   {genre.name}
                 </span>
               ))}
@@ -49,7 +53,7 @@ const GameDetail = () => {
               {game.platforms.map((platform) => {
                 try {
                   return (
-                    <span key={platform.platform.id} className={`${textColorClass} bg-gray-600 px-2 py-1 rounded-md mr-2 mb-2`}>
+                    <span key={platform.platform.id} className={`text-white bg-gray-600 px-2 py-1 rounded-md mr-2 mb-2`}>
                       {platform.platform.name}
                     </span>
                   );
@@ -69,7 +73,7 @@ const GameDetail = () => {
                 game.stores.map((store) => {
                   try {
                     return (
-                      <span key={store.store.id} className={`${textColorClass} bg-gray-600 px-2 py-1 rounded-md mr-2 mb-2`}>
+                      <span key={store.store.id} className={`text-white bg-gray-600 px-2 py-1 rounded-md mr-2 mb-2`}>
                         {store.store.name}
                       </span>
                     );
@@ -81,6 +85,18 @@ const GameDetail = () => {
               ) : (
                 <span className={`${textColorClass}`}>No stores available</span>
               )}
+            </div>
+          </div>
+
+          {/* Display English tags */}
+          <div className="mb-4">
+            <h3 className={`${textColorClass} mb-2`}>Tags (English):</h3>
+            <div className="flex flex-wrap">
+              {englishTags.map((tag) => (
+                <span key={tag.id} className={`text-white bg-gray-600 px-2 py-1 rounded-md mr-2 mb-2`}>
+                  {tag.name}
+                </span>
+              ))}
             </div>
           </div>
         </div>

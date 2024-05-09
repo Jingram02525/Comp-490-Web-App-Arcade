@@ -22,7 +22,7 @@ const TrendingGames = ({ gameList }) => {
             <div className="hidden md:grid md:grid-cols-3 gap-4 lg:grid-cols-4 mt-5">
                 {gameList.map((item, index) => index < 4 && (
                     <div key={index} className="bg-[#76a8f75e] rounded-lg p-2 pt-0 pl-0 pr-0 group hover:scale-110 transition-all duration-300 ease-in-out cursor-pointer">
-                        <img src={item.background_image} className="h-[270px] rounded-lg object-cover" alt="Game Cover" />
+                        <img src={item.background_image} className="h-[270px] w-4/5 mx-auto rounded-lg object-cover" alt="Game Cover" />
                         <h2 className="dark:text-white text-lg font-bold flex items-center">
                             {item.name}
                             <FaRegCopy

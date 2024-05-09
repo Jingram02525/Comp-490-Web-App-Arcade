@@ -8,10 +8,11 @@ import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSl
 
 
 const ParticlesComponent = (props) => {
-
   const [init, setInit] = useState(false);
+
   // this should be run only once per application lifetime
   useEffect(() => {
+    // Initialize the tsParticles engine
     initParticlesEngine(async (engine) => {
       // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
       // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
@@ -19,22 +20,23 @@ const ParticlesComponent = (props) => {
       //await loadAll(engine);
       //await loadFull(engine);
       await loadSlim(engine);
-      //await loadBasic(engine);
     }).then(() => {
       setInit(true);
     });
   }, []);
 
+  // Callback function when particles are loaded
   const particlesLoaded = (container) => {
     console.log(container);
   };
 
-
+  // Memoize options to prevent unnecessary re-renders
   const options = useMemo(
     () => ({
+      // Options for particles
       background: {
         color: {
-          value: "#3a1772",
+          value: props.backgroundColor || "#3a1772", // Default background color
         },
       },
       fpsLimit: 120,
@@ -98,11 +100,11 @@ const ParticlesComponent = (props) => {
       },
       detectRetina: true,
     }),
-    [],
+    []
   );
 
-
-  return <Particles id={props.id} init={particlesLoaded} options={options} />; 
+  // Render the Particles component with provided options
+  return <Particles id={props.id} init={particlesLoaded} options={options} />;
 };
 
 export default ParticlesComponent;

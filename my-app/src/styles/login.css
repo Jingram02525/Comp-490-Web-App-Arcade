@@ -1,14 +1,11 @@
 .login-container {
     font-family: 'Press Start 2P', cursive;
-    background-color: #250E4F;
     color: #fff;
-     
     display: flex;
     justify-content: center;
     align-items: center;
     height:  85vh;
     background-image: url('https://example.com/retro-bg.png');
-   
     flex-direction:column;
     
     padding: 0; 

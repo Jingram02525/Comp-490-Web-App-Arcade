@@ -39,14 +39,17 @@ const GameVideos = ({ gameId, gameName }) => {
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error.message}</div>;
 
+  // Determine the text color class based on the theme
+  const textColorClass = localStorage.getItem('theme') === 'light' ? 'text-black' : 'text-white';
+
   return (
     <div>
-      <h1 className="text-white text-3xl font-bold mb-4">Videos</h1>
-      <div className='text-white'>
+      <h1 className={`${textColorClass} text-3xl font-bold mb-4`}>Videos</h1>
+      <div className={`${textColorClass}`}>
         {videos.length > 0 ? (
           selectedVideo ? (
             <div key={selectedVideo.id} >
-              <h2 className='text-white'>{selectedVideo.name}</h2>
+              <h2>{selectedVideo.name}</h2>
               <iframe
                 width="560"
                 height="315"

@@ -54,7 +54,6 @@ const Login = () => {
 
     return (
       <>
-        <ParticlesComponent id="particles"/>
         <Navbar />
         <div className="login-container">
             <main className='container'>
@@ -89,6 +88,7 @@ const Login = () => {
                 </form>
             </main>
         </div>
+        <ParticlesComponent id="particles"/>
         <Footer />
       </>
     );

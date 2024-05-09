@@ -22,10 +22,10 @@ export const Header = () => {
             <div>
                 {theme === 'light' ?
                     <HiMoon
-                        className='text-[35px] bg-slate-200 text-black p-1 rounded-full cursor-pointer'
+                        className='text-[35px] bg-slate-400 text-black p-1 rounded-full cursor-pointer'
                         onClick={() => { setTheme('dark'); localStorage.setItem('theme', 'dark') }} /> :
                     <HiSun
-                        className='text-[35px] bg-slate-200 text-black p-1 rounded-full cursor-pointer'
+                        className='text-[35px] bg-slate-400 text-black p-1 rounded-full cursor-pointer'
                         onClick={() => { setTheme('light'); localStorage.setItem('theme', 'light') }} />
                 }
             </div>

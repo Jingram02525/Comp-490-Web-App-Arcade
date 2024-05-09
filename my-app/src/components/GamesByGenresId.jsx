@@ -23,12 +23,11 @@ const GamesByGenresId = ({ gameList, selectedGenresName }) => {
                 {gameList.map((item, index) => (
                     <div key={index} className="bg-[#76a8f75e] p-3 pl-2 pr-2 rounded-lg pb-12 h-full hover:scale-110 transition-all ease-in-out duration-300 cursor-pointer">
                         {/* Set fixed dimensions for the image container */}
-                        <div style={{ width: '427px', height: '200px' }}>
+                        <div className="w-full h-48 overflow-hidden rounded-xl">
                             <img
                                 src={item.background_image}
                                 alt="background image"
-                                className="w-full h-full rounded-xl object-fit"
-                                style={{ objectFit: 'cover' }} // Maintain aspect ratio and cover entire container
+                                className="w-full h-full object-fit rounded-xl"
                             />
                         </div>
                         <h2 className="text-lg dark:text-white font-bold flex items-center">

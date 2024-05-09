@@ -49,7 +49,7 @@ const Search = () => {
     <div className='game-search'>
         <form onSubmit={onSubmit}>
           <div className='flex items-center p-3'>
-            <div className='flex flex-grow bg-slate-200 p-2 w-full
+            <div className='flex flex-grow bg-slate-300 p-2 w-full
             mx-5 rounded-full items-center'>
                 <HiOutlineMagnifyingGlass/>
                   <input type='text' placeholder='Search Games...' value={searchTerm} onChange={handleChange} className='px-2 bg-transparent outline-none flex-1'/>
