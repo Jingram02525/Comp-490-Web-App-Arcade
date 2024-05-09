@@ -7,7 +7,7 @@ const Terms = () => {
     <>
     <Navbar />
     <header>
-      <h1>Replay - Terms and Conditions</h1>
+      <h1 className="text-white">Replay - Terms and Conditions</h1>
     </header>
     <main className="terms">
       <section>
