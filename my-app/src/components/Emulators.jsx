@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { useNavigate } from 'react-router-dom';
+import "../styles/emulators.css";
 
 const Emulators = () => {
   const [username, setUsername] = useState("");

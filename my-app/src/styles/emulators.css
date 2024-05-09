@@ -61,8 +61,9 @@
   .console:hover {
       background-color: #4ade80; /* Change background color on hover */
       color: white; /* Change text color on hover */
-      transform: scale(1.05);
+      transform: scale(1.03);
       box-shadow: 0 0 20px #4ade80; /* Increase shadow size on hover */
+      text-decoration-color: #fff;
   }
   
   .console:hover h2 {
