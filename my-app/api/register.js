@@ -18,7 +18,20 @@ const pool = new Pool({
 // API endpoint for registering a new user
 app.post('/api/register', async (req, res) => {
     const { username, email, password } = req.body;
+
+
+
+
     try {
+        const userExists = await pool.query('SELECT * FROM users WHERE username = $1', [username]);
+        const emailExists = await pool.query('SELECT * FROM users WHERE email = $1', [email]);
+
+        if (userExists.rows.length > 0) {
+            return res.status(409).json({ field: 'username', message: 'Username Taken!' });
+        }
+        if (emailExists.rows.length > 0) {
+            return res.status(410).json({ field: 'email', message: 'Email in use!' });
+        }
         // Insert user into the database
         const query = 'INSERT INTO users (username, email, password) VALUES ($1, $2, $3)';
         const newUser = await pool.query(query, [username, email, password]);

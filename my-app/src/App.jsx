@@ -11,7 +11,7 @@ import GameDetail from './pages/GameDetail';
 import GameDetailById from './pages/GameDetailById';
 import Search from './components/Search';
 import Results from './components/Results';
-import Copyright from './pages/Copyright/Copyright';
+import Copyright from './pages/Copyright';
 
 function App() {
  

@@ -1,5 +1,6 @@
 .register {
     font-family: 'Press Start 2P', cursive;
+    background-color: #250E4F; /* You might choose a slightly different shade for differentiation */
     color: #fff;
     display: flex;
     flex-direction: column;
@@ -56,4 +57,11 @@
 
 .register .registerBtn:hover {
     background-color: #cc0000;
+}
+.register .terms .termsbox{
+    margin-right: 10px;
+}
+.register .terms {
+    font-size: xx-small;
+    margin: 6px;
 }

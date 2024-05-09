@@ -1,6 +1,6 @@
-import "./Copyright.css"
-import Navbar from "../../components/Navbar"
-import Footer from "../../components/Footer"
+import "../styles/Copyright.css";
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 function Copyright() {
   return (
