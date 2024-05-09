@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import "../styles/Navbar.css";
+import Logo from '../assets/logo.png'
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className='bg-[#1E0B41] text-white p-5'>
+    /*<header className='bg-[#1E0B41] text-white p-5'>
       <nav className='flex justify-between items-center'>
         <div>
           <Link to="/" className='text-2xl no-underline text-white font-bold'>RePlay</Link>
@@ -76,7 +78,55 @@ const Navbar = () => {
           )}
         </div>
       </nav>
-    </header>
+    </header>*/
+    <nav className="navbar">
+      <Link to="/" className="navbar-brand">
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img src={Logo} alt="Logo" className='hidden md:block w-8 h-8 lg:w-14 lg:h-14'/>
+          <span className='logo-text'>RePlay</span>
+        </div>
+      </Link>
+      <div className="search-bar">
+        <input type="text" placeholder="ROMs, Games, etc,..." />
+        <button type="submit" onClick={handleSearch}>Search</button>
+      </div>
+      <ul className="navbar-links">
+        <li>
+          <Link to="/Roms" className="roms">
+            ROMS
+          </Link>
+        </li>
+        <li>
+          <Link to="/Emulator" className="emu">
+            Emulators
+          </Link>
+        </li>
+        {username ? (
+            <>
+              <span className='text-sky-500 bg-[#1E0B41] rounded p-1 border border-sky-500'>&nbsp; Profile: {username} &nbsp;</span>
+              <button
+                className='button text-yellow-500 hover:bg-yellow-500 hover:text-[white] hover:border-yellow-500'
+                onClick={handleSignOut}
+              >
+                Sign Out
+              </button>
+            </>
+          ) : (
+            <>
+              <li>
+                <Link to="/login" className="login">
+                  Login
+                </Link>
+              </li>
+              <li>
+                <Link to="/register" className="signup">
+                  Sign Up
+                </Link>
+              </li>
+            </>
+          )}
+      </ul>
+    </nav>
   );
 };
 

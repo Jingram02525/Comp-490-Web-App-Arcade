@@ -11,6 +11,7 @@
 .register h1 {
     font-size: 30px;
     margin-top: 0;  
+    color: white;
 }
 
 .register .registerForm {

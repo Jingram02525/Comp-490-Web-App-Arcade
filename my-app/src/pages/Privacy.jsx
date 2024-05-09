@@ -1,21 +1,45 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import '../styles/Terms.css';
 
 const Privacy = () => {
     return(
-        <div>
-            <header>
-                <h1>Privacy Policy</h1>
-            </header>
-            <main>
-                <div class="content">
-                    <p>This privacy policy describes how your personal information is collected, used, and shared when you visit or make a purchase from our website.</p>
-                    
-                    {/* <!-- Add more sections here --> */}
-
-                    <p>If you have any questions or concerns about our privacy policy, please contact us at privacy@webapparcade.com.</p>
-                </div>
-            </main>
-        </div>
+        <>
+  <Navbar />
+  <header>
+    <h1>Replay - Privacy Policy</h1>
+  </header>
+  <main className="terms">
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        Welcome to Replay! This Privacy Policy outlines our policies and
+        practices regarding the collection, use, and disclosure of your personal
+        information when you use our Web App Arcade.
+      </p>
+    </section>
+    <section>
+      <h2>Information Collection and Use</h2>
+      <p>
+        We collect several different types of information for various purposes
+        to provide and improve our Service to you.
+      </p>
+      {/* Include specific details about what information you collect and how it's used */}
+    </section>
+    <section>
+      <h2>Log Data</h2>
+      <p>
+        We may also collect information that your browser sends whenever you
+        visit our Service or when you access the Service by or through a mobile
+        device ("Log Data").
+      </p>
+      {/* Include details about log data such as IP addresses, browser type, etc. */}
+    </section>
+    {/* Other sections can be added as needed */}
+  </main>
+  <Footer />
+</>
     );
 }
 
