@@ -8,7 +8,7 @@ const Privacy = () => {
         <>
   <Navbar />
   <header>
-    <h1 className='text-white'>Replay - Privacy Policy</h1>
+    <h1 className="terms-header">Replay - Privacy Policy</h1>
   </header>
   <main className="terms">
     <section>
