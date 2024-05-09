@@ -1,7 +1,10 @@
-header{
+ header{
     color: #fff;
     text-align: center;
     padding: 1em 0;
+}
+.terms-header h1{
+    color: white;
 }
 
 h1, h2 {
