@@ -1,5 +1,5 @@
 import React from 'react';
-import ParticlesComponent from '../components/ParticlesComponent2'
+import ParticlesComponent from '../components/ParticlesComponent'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Emulators from '../components/Emulators'

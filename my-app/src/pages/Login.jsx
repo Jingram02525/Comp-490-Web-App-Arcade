@@ -88,7 +88,6 @@ const Login = () => {
                 </form>
             </main>
         </div>
-        <ParticlesComponent id="particles"/>
         <Footer />
       </>
     );

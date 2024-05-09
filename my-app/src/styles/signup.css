@@ -1,11 +1,12 @@
 .register {
     font-family: 'Press Start 2P', cursive;
+    background-color: #250E4F; /* You might choose a slightly different shade for differentiation */
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 85vh;
+    height: 95vh;
     padding: 20px;
 }
 .register h1 {
