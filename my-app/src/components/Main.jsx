@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Main = () => {
     return (
-        <main>
+        <main style={{ paddingBottom: 0, marginBottom: 0 }}>
             <section className="hero">
                 <h1>Welcome to RePlay</h1>
                 <p>
@@ -38,7 +38,6 @@ const Main = () => {
                 </ul>
             </section>
         </main>
-
     );
 }
 
