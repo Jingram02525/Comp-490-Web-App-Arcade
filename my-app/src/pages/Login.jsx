@@ -4,7 +4,6 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import "../styles/login.css";
 import ParticlesComponent from '../components/ParticlesComponent'
-const ParticlesComponentMemo = React.memo(ParticlesComponent);
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -33,31 +32,33 @@ const Login = () => {
     };
 
     const loginUser = () => {
-        fetch("http://localhost:8000/api/login", {
+        fetch("/api/login", { // Using relative URL
             method: "POST",
             body: JSON.stringify({ username, password }),
             headers: {
                 "Content-Type": "application/json",
             },
         })
-        .then((res) => res.json())
-        .then((data) => {
-            if (data.error_message) {
-                alert(data.error_message);
-            } else {
-                alert(data.message);
-                navigate("/dashboard");
-                localStorage.setItem("username", username); // Saving username to localStorage
+        .then((res) => {
+            if (!res.ok) {
+                throw res.json(); // Handle non-200 responses
             }
+            return res.json();
         })
-        .catch((err) => console.error(err));
+        .then((data) => {
+            alert(data.message);
+            navigate("/dashboard");
+            localStorage.setItem("username", username); // Saving username to localStorage
+        })
+        .catch((promise) => {
+            promise.then((data) => {
+                alert(data.error_message);
+            }).catch((err) => console.error("Error parsing JSON:", err));
+        });
     };
-
     return (
       <>
-      <div>
-      <ParticlesComponentMemo id="particles" />
-      </div>
+        <ParticlesComponent id="particles"/>
         <Navbar />
         <div className="login-container">
             <main className='container'>
