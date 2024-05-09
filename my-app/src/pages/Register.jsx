@@ -4,6 +4,7 @@ import "../styles/signup.css";
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ParticlesComponent from '../components/ParticlesComponent2';
+const ParticlesComponentMemo = React.memo(ParticlesComponent);
 
 const Register = () => {
     const [username, setUsername] = useState("");
@@ -73,10 +74,14 @@ const Register = () => {
 
     return (
         <>
-            <Navbar />
-            {/* <ParticlesComponent id="particles" /> */}
+        <div>
+          <ParticlesComponentMemo id="particles" />
+        </div>
+            <Navbar />           
             <main className='register'>
+            
                 <form className='registerForm' onSubmit={handleSubmit}>
+                
                     <h1 className='registerTitle'>Sign up!</h1>
                     <label htmlFor='username'>Username</label>
                     <input

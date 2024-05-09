@@ -1,6 +1,5 @@
 .register {
     font-family: 'Press Start 2P', cursive;
-    background-color: #250E4F; /* You might choose a slightly different shade for differentiation */
     color: #fff;
     display: flex;
     flex-direction: column;

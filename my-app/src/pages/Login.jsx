@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import "../styles/login.css";
 import ParticlesComponent from '../components/ParticlesComponent2'
+const ParticlesComponentMemo = React.memo(ParticlesComponent);
 
 const Login = () => {
     const [username, setUsername] = useState("");
@@ -54,6 +55,9 @@ const Login = () => {
 
     return (
       <>
+      <div>
+      <ParticlesComponentMemo id="particles" />
+      </div>
         <Navbar />
         <div className="login-container">
             <main className='container'>
