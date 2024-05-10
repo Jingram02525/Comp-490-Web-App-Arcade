@@ -4,11 +4,6 @@
 
 Welcome to **RePlay**, an exciting arcade game that brings classic gameplay into the modern web era. Developed with a passion for gaming and innovation, RePlay offers a fresh take on arcade classics, combining engaging mechanics with intuitive controls suitable for players of all ages.
 
-## Features
-
-- **Classic Fun with a Modern Twist:** Enjoy the nostalgia of arcade games blended with contemporary graphics and features.
-- **Accessible Anywhere:** As a web app, RePlay is available on any device with a browser, anytime.
-- **Competitive Leaderboards:** Challenge your friends and climb the ranks in our global leaderboard.
 
 ## Authors
 
