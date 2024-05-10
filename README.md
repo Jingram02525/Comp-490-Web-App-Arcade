@@ -19,7 +19,10 @@ Welcome to **RePlay**, an exciting arcade game that brings classic gameplay into
 
 ## How to Play
 
-Simply visit our website, choose your game, and start playing. No downloads required—get right into the game from your web browser!
+Simply visit our website, create an account and check out our emulators page you can play atari right from our website or upload your own rom games in the
+gameboy emulator or even gameboy advanced!
+
+https://replay-azure.vercel.app/
 
 ## Feedback and Contributions
 
