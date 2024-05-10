@@ -14,8 +14,7 @@ Welcome to **RePlay**, an exciting arcade game that brings classic gameplay into
 
 ## How to Play
 
-Simply visit our website, create an account and check out our emulators page you can play atari right from our website or upload your own rom games in the
-gameboy emulator or even gameboy advanced!
+Simply visit our website, create an account and check out our emulators page. You can play Atari right from our website or upload your own ROM games in the Game Boy emulator or even Game Boy Advance. Both Game Boy and Game Boy Advance emulators have the convenient feature of easy save files. Enjoy the nostalgic gaming experience!
 
 https://replay-azure.vercel.app/
 
