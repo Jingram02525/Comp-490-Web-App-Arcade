@@ -2,7 +2,7 @@
 
 # RePlay
 
-Welcome to **RePlay**, an exciting arcade game that brings classic gameplay into the modern web era. Developed with a passion for gaming and innovation, RePlay offers a fresh take on arcade classics, combining engaging mechanics with intuitive controls suitable for players of all ages.
+Welcome to **RePlay**, an exciting arcade game that brings classic gameplay into the modern web era. Developed by California State University students with a passion for gaming and innovation, RePlay offers a fresh take on arcade classics, combining engaging mechanics with intuitive controls suitable for players of all ages. (Current Date Of Publish: May 10, 2024)
 
 
 ## Authors
