@@ -86,10 +86,7 @@ const Navbar = () => {
           <span className='logo-text'>RePlay</span>
         </div>
       </Link>
-      <div className="search-bar">
-        <input type="text" placeholder="ROMs, Games, etc,..." />
-        <button type="submit" onClick={handleSearch}>Search</button>
-      </div>
+      
       <ul className="navbar-links">
         <li>
           <Link to="/Roms" className="roms">

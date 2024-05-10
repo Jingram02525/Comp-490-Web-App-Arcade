@@ -27,4 +27,12 @@ Thank you for playing RePlay—let the games begin!
 
 --- 
 
-Feel free to adjust the content as needed and insert the names of the authors where indicated!
+## Copyright
+
+This game is protected by copyright laws and international treaties. We encourage collaboration and welcome contributions from the community. If you are interested in contributing to the game's development, please reach out through our GitHub issues or pull requests. However, unauthorized reproduction or distribution of this game, or any portion of it, is strictly prohibited without prior permission.
+
+### Game Boy (GB) and Game Boy Advance (GBA)
+ For more information, please visit the following link: [GB and GBA Copyright](https://replay-azure.vercel.app/copyright)
+
+### Atari
+For more information, please refer to the Atari documentation available at: [Atari Documentation](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
