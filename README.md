@@ -35,3 +35,5 @@ This game is protected by copyright laws and international treaties. We encourag
 
 ### Atari
 For more information, please refer to the Atari documentation available at: [Atari Documentation](http://devernay.free.fr/hacks/chip8/C8TECH10.HTM)
+
+<iframe src="https://giphy.com/embed/iDOgzWkBquKDlzaw6W" width="480" height="450" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/game-arcade-atari-iDOgzWkBquKDlzaw6W">via GIPHY</a></p>
